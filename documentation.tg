@@ -1,0 +1,58 @@
+import std
+# --------- mutable ---------
+var x = 126
+# --------- constant ---------
+const y = 22.2
+# --------- reference ---------
+ref z = y # constant reference can not change
+
+# supported operators:
+# +,-,*,/,+=,-=,*=,/=
+# &,|,==,!=,!,>,<,>=,<=
+
+# supported types:
+# int: 123
+# float: 22.0123
+# string: "ASD"
+# boolean: true | false
+# none: none
+# tuple: (Any, Any, Any, ...)
+
+if(x == 123) {
+    "x is 123"
+}
+elif(x == 124) {
+    "x is 124"
+}
+else {
+    "x is not 123 or 124"
+}
+
+# create scopes
+{
+    var v # default to none
+
+    {
+
+    }
+}
+
+# delcare function
+func foo(a, b)
+{
+    "foo was just called"
+    return a + b
+    return # this returns none
+}
+
+# call foo
+foo(3, 3)
+
+namespace myNS
+{
+    # nested namespace
+    namespace nested
+    {
+
+    }
+}
